@@ -1,0 +1,20 @@
+{
+  "name": "realmcrafter-echoes-of-aethelgard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node -e \"import('fs').then(fs => fs.copyFileSync('index.source.html', 'index.html'))\" && vite",
+    "build": "tsc && node -e \"import('fs').then(fs => fs.copyFileSync('index.source.html', 'index.html'))\" && vite build && node -e \"import('fs').then(fs => fs.copyFileSync('dist/index.html', 'index.html'))\"",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.170.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vite-plugin-singlefile": "^2.1.0"
+  }
+}
